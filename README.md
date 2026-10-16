@@ -1,6 +1,6 @@
 # TaskFlow Web
 
-**Live demo:** https://ilker-ekin.github.io/taskflow-web/
+**Live demo:** _coming soon — Netlify link will be added here_
 
 A simple task management app built with **Vue 3**, **Vite** and **Tailwind CSS**. You can add, list, update and delete tasks, and they are saved in the browser's **LocalStorage**, so no backend is needed.
 
@@ -40,7 +40,7 @@ Requires Node.js 24 (see `.nvmrc`).
 npm install      # install dependencies
 npm run dev      # start the dev server at http://localhost:5173
 npm run build    # build for production into dist/
-npm run preview  # preview the production build at http://localhost:4173/taskflow-web/
+npm run preview  # preview the production build at http://localhost:4173
 ```
 
 ## Project Structure
@@ -76,12 +76,7 @@ Tasks are saved in LocalStorage under the key `taskflow-tasks`. If that data is 
 
 ## Deployment
 
-The site is deployed to **GitHub Pages** by a GitHub Actions workflow (`.github/workflows/deploy.yml`) on every push to `main`.
-
-- `vite.config.js` sets `base: '/taskflow-web/'` for production builds, because GitHub Pages serves the site from that sub-path.
-- `npm run build` also copies `index.html` to `404.html`, so that URLs like `/tasks/new` still work when opened directly or refreshed.
-
-One-time setup: **Settings → Pages → Source: GitHub Actions**.
+The site is deployed to **Netlify**. `netlify.toml` configures the build (`npm run build` → `dist`) and adds a redirect so that URLs like `/tasks/new` still work when opened directly or refreshed.
 
 ## Backend Project
 
